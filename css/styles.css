@@ -102,14 +102,96 @@ nav li {
   float: left;
 }
 
-#footer-btt {
+#footer-to-top {
   float: right;
   text-transform: uppercase;
 }
 
 #footer-name,
-#footer-btt {
+#footer-to-top,
+#footer-to-home,
+#footer-to-portfolio,
+#footer-to-contact {
   color: black;
   font-weight: bold;
   font-size: 1.1em;
+}
+
+#footer-to-home,
+#footer-to-portfolio,
+#footer-to-contact {
+  display: none;
+}
+
+/* Clearfix */
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  /* Header */
+  nav li {
+    display: inline-block;
+    background: #dcdcdc;
+    border-style: none;
+  }
+
+  /* Banner */
+  .banner img {
+    float: right;
+    width: 45%;
+    padding-bottom: 3em;
+    padding-right: 2em;
+  }
+
+  .banner p {
+    margin-top: 2em;
+    float: left;
+    width: 45%;
+    padding-left: 1em;
+    padding-top: 1em;
+  }
+
+  /* Portfolio */
+
+  .portfolio h2 {
+    margin: 2.5em 0;
+  }
+
+  #project1,
+  #project3,
+  #project5 {
+    float: left;
+    width: 45%;
+    margin-left: 2em;
+  }
+
+  #project2,
+  #project4,
+  #project6 {
+    float: right;
+    width: 45%;
+    margin-right: 2em;
+  }
+
+  /* Footer */
+
+  /* Footer Nav */
+
+  #footer-to-top {
+    display: none;
+  }
+
+  #footer-to-home,
+  #footer-to-portfolio,
+  #footer-to-contact {
+    display: inline;
+    text-transform: uppercase;
+    float: right;
+    margin-bottom: 2.5em;
+  }
 }
