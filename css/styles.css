@@ -1,3 +1,7 @@
+/* =================================
+              Base Styles
+==================================== */
+
 * {
   box-sizing: border-box;
 }
@@ -17,14 +21,22 @@ p {
 
 a {
   text-decoration: none;
-  color: #8FBC8F;
+  color: #8fbc8f;
 }
 
 .container {
   background-color: #dcdcdc;
 }
 
-/* Main Header */
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* =================================
+          Main-header 320px
+==================================== */
 
 .main-header {
   font-weight: bold;
@@ -35,7 +47,7 @@ a {
   padding-top: 0.5em;
 }
 
-nav a {
+.header-nav a {
   font-size: 1.15em;
   margin: 0 0.7em 0.3em;
   padding: 0.5em;
@@ -46,7 +58,9 @@ nav a {
   display: block;
 }
 
-/* Banner */
+/* =================================
+            Banner 320px
+==================================== */
 
 .banner img {
   margin-top: 3em;
@@ -58,7 +72,9 @@ nav a {
   padding-bottom: 2em;
 }
 
-/* Portfolio */
+/* =================================
+            Portfolio 320px
+==================================== */
 
 .portfolio h2 {
   margin: 2em 0 2em;
@@ -80,7 +96,10 @@ nav a {
   width: 25em;
 }
 
-/* footer */
+/* =================================
+              Footer 320px
+==================================== */
+
 .main-footer {
   background-color: #dcdcdc;
 }
@@ -102,52 +121,51 @@ nav a {
   display: block;
   background-color: #dcdcdc;
   overflow: auto;
-  padding-bottom: 1em;
 }
 
 #footer-name {
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-bottom: 1.5em;
   float: left;
-}
-
-#footer-to-top {
-  float: right;
-  text-transform: uppercase;
-}
-
-#footer-name,
-#footer-to-top,
-#footer-to-home,
-#footer-to-portfolio,
-#footer-to-contact {
   color: black;
   font-weight: bold;
   font-size: 1.1em;
 }
 
-#footer-to-home,
-#footer-to-portfolio,
-#footer-to-contact {
+#footer-to-top {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  margin-right: 1em;
+  float: right;
+  text-transform: uppercase;
+  color: #8fbc8f;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.footer-show {
+  margin-top: 3em;
   display: none;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
-/* Clearfix */
-.clearfix::after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-/* Media Queries */
+/* =================================
+ Media Query Display 768px + 1024px
+==================================== */
 
 @media (min-width: 768px) {
   /* Header */
-  nav a {
+  .header-nav a {
     display: inline-block;
     background: #dcdcdc;
     border-style: none;
   }
 
-  /* Banner */
+  /* =================================
+              Banner 768px
+  ==================================== */
   .banner img {
     float: right;
     width: 20em;
@@ -163,7 +181,9 @@ nav a {
     padding-top: 1em;
   }
 
-  /* Portfolio */
+  /* =================================
+              Porfolio 768px
+  ==================================== */
 
   .portfolio {
     overflow: hidden;
@@ -200,27 +220,37 @@ nav a {
     width: 22em;
   }
 
-  /* Footer */
+  /* =================================
+              Footer 768px
+  ==================================== */
 
-  /* Footer Nav */
+  #footer-name {
+    margin-top: 3em;
+    margin-left: 2em;
+  }
 
   #footer-to-top {
     display: none;
   }
 
-  #footer-to-home,
-  #footer-to-portfolio,
-  #footer-to-contact {
-    display: inline;
-    text-transform: uppercase;
+  .footer-show {
     float: right;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #8fbc8f;
     margin-bottom: 2.5em;
+    padding-right: 2em;
+  }
+
+  .footer-show a {
+    padding-left: 2em;
   }
 }
 
 @media (min-width: 1024px) {
-
-  /* Header */
+  /* =================================
+              Header 1024px
+  ==================================== */
   .main-header h1,
   .banner p {
     float: left;
@@ -242,7 +272,9 @@ nav a {
     margin-right: 3em;
   }
 
-  /* Banner */
+  /* =================================
+              Banner 1024px
+  ==================================== */
 
   .banner img {
     width: 30em;
@@ -250,7 +282,9 @@ nav a {
     float: right;
   }
 
-  /* Portfolio */
+  /* =================================
+            Portfolio 1024px
+  ==================================== */
 
   .portfolio img {
     width: 21em;
@@ -272,5 +306,17 @@ nav a {
   #project6 {
     float: left;
     width: 33%;
+  }
+
+  /* =================================
+            Footer 1024px
+  ==================================== */
+
+  #footer-name {
+    margin-left: 2.5em;
+  }
+
+  .footer-show {
+    margin-right: 2.5em;
   }
 }
