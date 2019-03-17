@@ -15,6 +15,11 @@ p {
   color: #696969;
 }
 
+a {
+  text-decoration: none;
+  color: #8FBC8F;
+}
+
 .container {
   background-color: #dcdcdc;
 }
@@ -30,7 +35,7 @@ p {
   padding-top: 0.5em;
 }
 
-nav li {
+nav a {
   font-size: 1.15em;
   margin: 0 0.7em 0.3em;
   padding: 0.5em;
@@ -38,6 +43,7 @@ nav li {
   background: white;
   text-transform: uppercase;
   list-style-type: none;
+  display: block;
 }
 
 /* Banner */
@@ -135,7 +141,7 @@ nav li {
 
 @media (min-width: 768px) {
   /* Header */
-  nav li {
+  nav a {
     display: inline-block;
     background: #dcdcdc;
     border-style: none;
@@ -159,6 +165,10 @@ nav li {
 
   /* Portfolio */
 
+  .portfolio {
+    overflow: hidden;
+  }
+
   .portfolio h2 {
     margin: 2.5em 0;
   }
@@ -167,20 +177,27 @@ nav li {
   #project3,
   #project5 {
     float: left;
-    width: 45%;
-    margin-left: 2em;
+    width: 50%;
+    height: 25em;
   }
 
   #project2,
   #project4,
   #project6 {
     float: right;
-    width: 45%;
-    margin-right: 2em;
+    width: 50%;
+    height: 25em;
   }
 
   .portfolio p {
-    width: auto;
+    font-size: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 3em;
+  }
+
+  .portfolio img {
+    width: 22em;
   }
 
   /* Footer */
@@ -202,6 +219,8 @@ nav li {
 }
 
 @media (min-width: 1024px) {
+
+  /* Header */
   .main-header h1,
   .banner p {
     float: left;
@@ -223,24 +242,35 @@ nav li {
     margin-right: 3em;
   }
 
+  /* Banner */
+
   .banner img {
     width: 35em;
     padding-right: 4em;
     float: right;
   }
 
+  /* Portfolio */
+
+  .portfolio img {
+    width: 21em;
+  }
+
   #project1,
-  #project2,
-  #project3 {
+  #project4 {
     float: left;
     width: 33%;
   }
 
-  #project4,
-  #project5,
+  #project2,
+  #project5 {
+    float: left;
+    width: 33%;
+  }
+
+  #project3,
   #project6 {
     float: left;
     width: 33%;
-    margin-left: 2em;
   }
 }
